@@ -33,7 +33,11 @@ class UsersController < ApplicationController
   def show
     raise Discourse::InvalidAccess if SiteSetting.hide_user_profiles_from_public && !current_user
 
-    @user = fetch_user_from_params(include_inactive: current_user.try(:staff?))
+    @user = fetch_user_from_params(
+      { include_inactive: current_user.try(:staff?) },
+      [{ user_profile: :card_image_badge }]
+    )
+
     user_serializer = UserSerializer.new(@user, scope: guardian, root: 'user')
 
     # TODO remove this options from serializer
@@ -405,6 +409,7 @@ class UsersController < ApplicationController
         @user.auth_token = nil
         if @user.save
           Invite.invalidate_for_email(@user.email) # invite link can't be used to log in anymore
+          session["password-#{params[:token]}"] = nil
           logon_after_password_reset
         end
       end

@@ -211,7 +211,7 @@ zh_CN:
       remove: "取消收藏"
       confirm_clear: "你确定要清除该主题的所有收藏吗？"
     topic_count_latest:
-      other: "{{count}} 个近期的主题或更新的主题。"
+      other: "{{count}} 新主题或更新的主题。"
     topic_count_unread:
       other: "{{count}} 未读主题。"
     topic_count_new:
@@ -748,6 +748,8 @@ zh_CN:
       rate:
         other: "%{count} 错误/%{duration}"
     learn_more: "了解更多..."
+    all_time: '总量'
+    all_time_desc: '创建的主题总量'
     year: '年'
     year_desc: '365 天内创建的主题'
     month: '月'
@@ -904,8 +906,10 @@ zh_CN:
       show_preview: '显示预览 &raquo;'
       hide_preview: '&laquo; 隐藏预览'
       quote_post_title: "引用整个帖子"
+      bold_label: "B"
       bold_title: "加粗"
       bold_text: "加粗示例"
+      italic_label: "I"
       italic_title: "斜体"
       italic_text: "斜体示例"
       link_title: "链接"
@@ -923,6 +927,7 @@ zh_CN:
       olist_title: "数字列表"
       ulist_title: "符号列表"
       list_item: "列表条目"
+      heading_label: "H"
       heading_title: "标题"
       heading_text: "标题头"
       hr_title: "分割线"
@@ -964,7 +969,7 @@ zh_CN:
       moved_post: "<i title='移动了帖子' class='fa fa-sign-out'></i><p><span>{{username}}</span>移动了{{description}}</p>"
       linked: "<i title='关联帖子' class='fa fa-link'></i><p><span>{{username}}</span>{{description}}</p>"
       granted_badge: "<i title='徽章授予' class='fa fa-certificate'></i><p>获得“{{description}}”</p>"
-      watching_first_post: "<i title='新主题' class='fa fa-dot-circle-o'></i><p><span>新主题</span>{{description}}</p>"
+      watching_first_post: "<i title='近期主题' class='fa fa-dot-circle-o'></i><p><span>近期主题</span>{{description}}</p>"
       group_message_summary:
         other: "<i title='群组收件箱中的消息' class='fa fa-group'></i><p> {{count}} 条消息在{{group_name}}组的收件箱中</p>"
       alt:
@@ -1056,7 +1061,7 @@ zh_CN:
         changed_tags: "主题的标签被修改"
       none:
         unread: "你没有未读主题。"
-        new: "你没有新主题可读。"
+        new: "你没有近期主题可读。"
         read: "你尚未阅读任何主题。"
         posted: "你尚未在任何主题中发帖。"
         latest: "没有新的主题。"
@@ -1073,7 +1078,7 @@ zh_CN:
         hot: "没有更多热门主题可看了。"
         posted: "没有更多已发布主题可看了。"
         read: "没有更多已阅主题可看了。"
-        new: "没有更多新主题可看了。"
+        new: "没有更多的近期主题。"
         unread: "没有更多未读主题了。"
         category: "没有更多{{category}}分类的主题了。"
         top: "没有更多最佳主题了。"
@@ -1095,10 +1100,10 @@ zh_CN:
         title: '移动到收件箱'
         help: '移动消息到收件箱'
       list: '主题'
-      new: '新主题'
+      new: '近期主题'
       unread: '未读'
       new_topics:
-        other: '{{count}} 新主题'
+        other: '{{count}} 近期主题'
       unread_topics:
         other: '{{count}} 未读主题'
       title: '主题'
@@ -1266,7 +1271,7 @@ zh_CN:
         success_group: "成功邀请了群组至该消息。"
         error: "抱歉，邀请时出了点小问题。"
         group_name: "群组名"
-      controls: "主题控制操作"
+      controls: "主题控件"
       invite_reply:
         title: '邀请'
         username_placeholder: "用户名"
@@ -1696,7 +1701,7 @@ zh_CN:
         lower_title: "近期"
         title: "近期"
         title_with_count:
-          other: "近期（{{count}}）"
+          other: "近期 ({{count}})"
         help: "最近几天里创建的主题"
       posted:
         title: "我的帖子"
@@ -1893,7 +1898,7 @@ zh_CN:
           hot: "没有更多的热门话题。"
           posted: "没有更多的发布主题。"
           read: "没有更多已阅主题可看了。"
-          new: "没有更多近期主题可看了。"
+          new: "没有更多的近期主题。"
           unread: "没有更多未读主题了。"
           top: "没有更多最佳主题了。"
           bookmarks: "没有更多收藏的主题了。"
@@ -2635,6 +2640,7 @@ zh_CN:
           developer: '开发者'
           embedding: "嵌入"
           legal: "法律信息"
+          user_api: '用户 API'
           uncategorized: '未分类'
           backups: "备份"
           login: "登录"
